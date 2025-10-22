@@ -30,8 +30,6 @@ export default function LoginComp() {
 
 const estilos = StyleSheet.create({
     containerCaixa: {
-        height: 200,
-        width: 200,
         borderTopLeftRadius: '15px',
         borderTopRightRadius: '15px',
         justifyContent: "flex-start",
@@ -41,11 +39,10 @@ const estilos = StyleSheet.create({
     box: {
         height: 200,
         width: 200,
-        borderTopLeftRadius: '15px',
-        borderTopRightRadius: '15px',
         justifyContent: "flex-start",
         alignItems: "center",
         margin: 30,
+        backgroundColor: "yellow",
     },
     caixaTexto: {
         borderWidth: 1,
