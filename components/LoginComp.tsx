@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {useRouter} from "expo-router";
+import { useRouter } from "expo-router";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 
 export default function LoginComp() {
@@ -22,9 +22,8 @@ export default function LoginComp() {
                     onChangeText={setSenha}
                 />
             </View>
-            <View style={estilos.botao}>
+
             <Button title="Log in" onPress={() => router.push("/InicioScreen")} />
-            </View>
         </View>
 
     );
@@ -53,7 +52,5 @@ const estilos = StyleSheet.create({
         color: "white",
         margin: 10
     },
-    botao: {
-        margin: 15
-    }
+
 })
