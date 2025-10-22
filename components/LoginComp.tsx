@@ -22,7 +22,9 @@ export default function LoginComp() {
                     onChangeText={setSenha}
                 />
             </View>
+            <View style={estilos.botao}>
             <Button title="Log in" onPress={() => router.push("/InicioScreen")} />
+            </View>
         </View>
 
     );
@@ -50,5 +52,8 @@ const estilos = StyleSheet.create({
         backgroundColor: "gray",
         color: "white",
         margin: 10
+    },
+    botao: {
+        margin: 15
     }
 })

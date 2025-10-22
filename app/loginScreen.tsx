@@ -11,8 +11,11 @@ export default function LoginScreen(){
 
 const estilos = StyleSheet.create({
     container: {
+        height: "auto",
+        width: "auto",
+        justifyContent: "flex-start",
         alignItems: "center",
-        justifyContent: "center",
-        minHeight: "auto",
+        margin: 30,
+        backgroundColor: "yellow",
     }
 })
