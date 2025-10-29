@@ -9,7 +9,7 @@ export default function LoginComp() {
 
     return (
         <View style={estilos.box}>
-            <Text>Faça seu login</Text>
+            <Text style={estilos.titulo}>Faça seu login</Text>
             <View style={estilos.containerCaixa}>
                 <TextInput style={estilos.caixaTexto}
                     placeholder="Seu nome aqui"
@@ -21,6 +21,9 @@ export default function LoginComp() {
                     value={senha}
                     onChangeText={setSenha}
                 />
+                <Text>Não tem uma conta?
+                <Text onPress={() => router.push("/telaCadastro")} style={estilos.botao}> Crie uma aqui</Text>
+                </Text>
             </View>
 
             <Button title="Log in" onPress={() => router.push("/InicioScreen")} />
@@ -31,16 +34,13 @@ export default function LoginComp() {
 
 const estilos = StyleSheet.create({
     containerCaixa: {
-        borderTopLeftRadius: '15px',
-        borderTopRightRadius: '15px',
-        justifyContent: "flex-start",
-        alignItems: "baseline",
-        margin: 30
+        justifyContent: "center",
+        alignItems: "center",
     },
     box: {
-        height: 200,
-        width: 200,
-        justifyContent: "flex-start",
+        height: '80%',
+        width: '20%',
+        justifyContent: "space-evenly",
         alignItems: "center",
         margin: 30,
         backgroundColor: "yellow",
@@ -50,7 +50,14 @@ const estilos = StyleSheet.create({
         borderColor: "black",
         backgroundColor: "gray",
         color: "white",
-        margin: 10
+        margin: 10,
+        width:'100%'
     },
-
+    titulo: {
+        fontSize: 30,
+        fontWeight: "bold"
+    },
+    botao:{
+        color: "blue"
+    }
 })

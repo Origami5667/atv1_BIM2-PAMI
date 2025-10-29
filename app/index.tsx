@@ -8,6 +8,7 @@ export default function Home(){
         <View>
             <Text>Home</Text>
             <Button title="ir para tela de login" onPress={() => router.push("/loginScreen")}/>
+            <Button title="Ir para tela de cadastro" onPress={() => router.push("/telaCadastro")}/>
         </View>
     )
 }
