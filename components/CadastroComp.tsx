@@ -1,6 +1,6 @@
-import { View, Text, Button, TextInput, StyleSheet } from 'react-native';
-import { useState } from 'react';
 import { useRouter } from 'expo-router';
+import { useState } from 'react';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function CadastroComp() {
     const router = useRouter();
@@ -24,32 +24,35 @@ export default function CadastroComp() {
     return (
         <View style={estilos.box}>
             <Text style={estilos.titulo}>Faça seu cadastro</Text>
+
             <View style={estilos.containerCaixa}>
+
             <TextInput style={estilos.caixaTexto}
-            placeholder='Seu nome aqui'
+            placeholder='   Seu nome aqui'
             value={nome}
             onChangeText={setNome}
             />
             <TextInput style={estilos.caixaTexto}
-                placeholder='Coloque seu email'
+                placeholder='   Coloque seu email'
                 value={email}
                 onChangeText={setEmail}
             />
             <TextInput style={estilos.caixaTexto}
-                placeholder='Crie uma senha'
+                placeholder='   Crie uma senha'
                 value={senha}
                 onChangeText={setSenha}
             />
             <TextInput style={estilos.caixaTexto}
-                placeholder='Confirme sua senha'
+                placeholder='   Confirme sua senha'
                 value={confSenha}
                 onChangeText={setConf}
             />
             {!passwordMatch && (
-                <Text>As senhas não são iguais</Text>
+                <Text style={estilos.a}>  As senhas não são iguais</Text>
             )}
+
             </View>
-            <Button title='Cadastrar' onPress={IdenSenha}/>
+            <Button title='Cadastrar' onPress={IdenSenha} />
         </View>
     )
     
@@ -59,10 +62,13 @@ const estilos = StyleSheet.create({
     containerCaixa: {
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "rgba(0, 0, 0, 0.8)",
+        borderRadius: 10,
+        padding: 10,
     },
     box: {
-        height: '80%',
-        width: '20%',
+        height: '100%',
+        width: '100%',
         justifyContent: "space-evenly",
         alignItems: "center",
         margin: 30,
@@ -74,10 +80,17 @@ const estilos = StyleSheet.create({
         backgroundColor: "gray",
         color: "white",
         margin: 10,
-        width:'100%'
+        width: 300,
+        display: "flex",
+        flexDirection: "column",
+        height: 30,
+        borderRadius: 10,
     },
     titulo: {
         fontSize: 30,
         fontWeight: "bold"
     },
+    a: {
+        color: "white",
+    }
 });

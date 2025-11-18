@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, ScrollView, TouchableOpacity, Linking } from "react-native";
+import { View, Text, Image, ScrollView, TouchableOpacity, Linking, Button } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 
@@ -93,19 +93,8 @@ export default function ListingDetails() {
 
       {/* BUTTON */}
       <View style={{ paddingHorizontal: 16, paddingBottom: 40, marginTop: 10 }}>
-        <TouchableOpacity
-        
-          style={{
-            backgroundColor: "#FFCC00",
-            padding: 14,
-            borderRadius: 30,
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-             <TouchableOpacity onPress={() => router.push('/Catalogo')}></TouchableOpacity>
-          <Text style={{ fontWeight: "700", fontSize: 16 }}>Ir ao Catalogo</Text>
-        </TouchableOpacity>
+             
+        <Button title="Ir ao catalogo" onPress={() => router.push("/Catalogo")}/>
       </View>
     </ScrollView>
 

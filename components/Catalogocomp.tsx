@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView, Button } from 'react-native';
 import { useRouter } from 'expo-router';
 
 export default function CatalogoComp() {
@@ -56,9 +56,7 @@ export default function CatalogoComp() {
       </View>
 
       {/* Botão Add to Cart */}
-      <TouchableOpacity style={estilos.botao}>
-        <Text style={estilos.textoBotao}>Adicionar ao carrinho</Text>
-      </TouchableOpacity>
+      <Button title="Adicionar ao carrinho" onPress={() => router.push("/Carrinho")} />
     </ScrollView>
   );
 }

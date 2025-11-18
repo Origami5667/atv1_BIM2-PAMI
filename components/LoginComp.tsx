@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { useRouter } from "expo-router";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { useState } from "react";
+import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function LoginComp() {
     const router = useRouter();
@@ -11,16 +11,22 @@ export default function LoginComp() {
         <View style={estilos.box}>
             <Text style={estilos.titulo}>Faça seu login</Text>
             <View style={estilos.containerCaixa}>
-                <TextInput style={estilos.caixaTexto}
-                    placeholder="Seu nome aqui"
-                    value={nome}
-                    onChangeText={setNome}
-                />
-                <TextInput style={estilos.caixaTexto}
-                    placeholder="Sua senha"
-                    value={senha}
-                    onChangeText={setSenha}
-                />
+                
+                <View style={estilos.boxx}>
+                    <TextInput 
+                        style={estilos.caixaTexto}
+                        placeholder="Sua senha"
+                        value={senha}
+                        onChangeText={setSenha}
+                    />
+                    <TextInput 
+                        style={estilos.caixaTexto}
+                        placeholder="Seu nome aqui"
+                        value={nome}
+                        onChangeText={setNome}
+                    />
+                </View>
+                
                 <Text>Não tem uma conta?
                 <Text onPress={() => router.push("/telaCadastro")} style={estilos.botao}> Crie uma aqui</Text>
                 </Text>
@@ -38,12 +44,15 @@ const estilos = StyleSheet.create({
         alignItems: "center",
     },
     box: {
-        height: '80%',
-        width: '20%',
+        height: '100%',
+        width: '100%',
         justifyContent: "space-evenly",
         alignItems: "center",
         margin: 30,
         backgroundColor: "yellow",
+        display: "flex",
+        flexDirection: "column",
+        padding: 15,
     },
     caixaTexto: {
         borderWidth: 1,
@@ -51,13 +60,25 @@ const estilos = StyleSheet.create({
         backgroundColor: "gray",
         color: "white",
         margin: 10,
-        width:'100%'
+        height: 30,
+        width: 300,
+        borderRadius: 5,
+        display: "flex",
+        flexDirection: "column",
     },
     titulo: {
         fontSize: 30,
         fontWeight: "bold"
     },
     botao:{
-        color: "blue"
+        color: "blue",
+    },
+    boxx: {
+        alignContent: "center",
+        display: "flex",
+        flexDirection: "column",
+        height: '100%',
+        width: '100%',
+        marginTop: 100,
     }
 })

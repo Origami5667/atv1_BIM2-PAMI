@@ -14,5 +14,6 @@ const estilos = StyleSheet.create({
         flex: 1,
         justifyContent: "space-between",
         alignItems: "center",
+        backgroundColor: "yellow"
     }
 })
