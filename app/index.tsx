@@ -11,7 +11,7 @@ export default function Home() {
             <Button title="Ir para tela de cadastro" onPress={() => router.push("/telaCadastro")} />
             <Button title="Ir para tela de catálogo" onPress={() => router.push("/Catalogo")} />
             <Button title="Ir para tela de carrinho" onPress={() => router.push("/Carrinho")} />
-             <Button title="Ir para tela de Inicio" onPress={() => router.push("/Inicio")} />
+             <Button title="Ir para tela de Inicio" onPress={() => router.push("/InicioScreen")} />
         </View>
     )
 }
