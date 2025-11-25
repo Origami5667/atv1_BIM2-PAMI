@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, Image, ScrollView, TouchableOpacity, Linking, Button } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 
 export default function ListingDetails() {
@@ -37,15 +36,6 @@ export default function ListingDetails() {
         <Text style={{ fontSize: 22, fontWeight: "700", marginBottom: 6 }}>
           CARBON BLINDAGENS
         </Text>
-
-        <TouchableOpacity onPress={() => Linking.openURL("https://maps.google.com")}>
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <Ionicons name="location" size={18} color="#E91E63" />
-            <Text style={{ marginLeft: 6, fontWeight: "600", color: "#007bff" }}>
-              Map View
-            </Text>
-          </View>
-        </TouchableOpacity>
 
         <Text style={{ marginTop: 10, fontSize: 14, color: "#444" }}>
           Centro automotivo especializado em manutenção, revisão, troca de peças e

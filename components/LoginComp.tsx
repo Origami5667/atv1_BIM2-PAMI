@@ -42,6 +42,10 @@ const estilos = StyleSheet.create({
     containerCaixa: {
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "rgba(0, 0, 0, 0.8)",
+        borderRadius: 10,
+        padding: 10,
+        height: '20%'
     },
     box: {
         height: '100%',

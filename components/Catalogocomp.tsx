@@ -1,5 +1,13 @@
-import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView, Button } from 'react-native';
-import { useRouter } from 'expo-router';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  ScrollView,
+  Button,
+} from "react-native";
+import { useRouter } from "expo-router";
 
 export default function CatalogoComp() {
   const router = useRouter();
@@ -14,7 +22,9 @@ export default function CatalogoComp() {
       {/* Imagem do produto */}
       <View style={estilos.imagemContainer}>
         <Image
-          source={{ uri: 'https://cdn-icons-png.flaticon.com/512/1048/1048315.png' }}
+          source={{
+            uri: "https://cdn-icons-png.flaticon.com/512/1048/1048315.png",
+          }}
           style={estilos.imagemProduto}
           resizeMode="contain"
         />
@@ -40,23 +50,23 @@ export default function CatalogoComp() {
 
           <View style={estilos.linha}>
             <Text style={estilos.label}>Fornecedor</Text>
-            <TouchableOpacity onPress={() => router.push('/telaCadastro')}>
-              <Text style={estilos.link}>Auto Poderes</Text>
-            </TouchableOpacity>
+            <Text style={estilos.valor}>Auto Poderes</Text>
           </View>
         </View>
 
         <View style={estilos.card}>
           <Text style={estilos.cardTitulo}>Descrição do Produto</Text>
           <Text style={estilos.descricao}>
-           Blindagem basica sobre um carro sedan. Nivel de blindagem III-A 
-
+            Blindagem basica sobre um carro sedan. Nivel de blindagem III-A
           </Text>
         </View>
       </View>
 
       {/* Botão Add to Cart */}
-      <Button title="Adicionar ao carrinho" onPress={() => router.push("/Carrinho")} />
+      <Button
+        title="Adicionar ao carrinho"
+        onPress={() => router.push("/Carrinho")}
+      />
     </ScrollView>
   );
 }
@@ -64,21 +74,21 @@ export default function CatalogoComp() {
 const estilos = StyleSheet.create({
   containerGeral: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   header: {
-    backgroundColor: '#FFC107',
+    backgroundColor: "#FFC107",
     height: 60,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     elevation: 4,
   },
   headerTitulo: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   imagemContainer: {
-    alignItems: 'center',
+    alignItems: "center",
     paddingVertical: 20,
   },
   imagemProduto: {
@@ -90,57 +100,57 @@ const estilos = StyleSheet.create({
   },
   produtoNome: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 4,
   },
   preco: {
     fontSize: 16,
-    color: '#004aad',
-    fontWeight: 'bold',
+    color: "#004aad",
+    fontWeight: "bold",
     marginBottom: 12,
   },
   card: {
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: "#ddd",
     borderRadius: 8,
     padding: 12,
     marginBottom: 16,
   },
   cardTitulo: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 10,
     fontSize: 15,
   },
   linha: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     marginBottom: 8,
   },
   label: {
-    color: '#555',
-    fontWeight: 'bold',
+    color: "#555",
+    fontWeight: "bold",
   },
   valor: {
-    color: '#333',
+    color: "#333",
   },
   link: {
-    color: '#004aad',
-    textDecorationLine: 'underline',
+    color: "#004aad",
+    textDecorationLine: "underline",
   },
   descricao: {
-    color: '#555',
+    color: "#555",
     fontSize: 13,
     lineHeight: 18,
   },
   botao: {
-    backgroundColor: '#FFC107',
+    backgroundColor: "#FFC107",
     height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginTop: 10,
   },
   textoBotao: {
-    fontWeight: 'bold',
-    color: '#000',
+    fontWeight: "bold",
+    color: "#000",
   },
 });
